@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "terms_conditions",
+  "info": {
+    "singularName": "terms-condition",
+    "pluralName": "terms-conditions",
+    "displayName": "terms-condition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "termscondition": {
+      "type": "blocks"
+    },
+    "termsConditionTitle": {
+      "type": "string"
+    }
+  }
+}

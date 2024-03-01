@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "colleges",
+  "info": {
+    "singularName": "college",
+    "pluralName": "colleges",
+    "displayName": "College",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "college_name": {
+      "type": "text"
+    },
+    "college_img": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "college_link": {
+      "type": "string"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "colleges"
+    },
+    "top_colleges": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::top-college.top-college",
+      "mappedBy": "college"
+    },
+    "CollageType": {
+      "type": "enumeration",
+      "enum": [
+        "MBBS",
+        "MBA",
+        "B.TECH",
+        "M.TECH"
+      ]
+    },
+    "CollageTag": {
+      "type": "enumeration",
+      "enum": [
+        "Top ranked colleges",
+        "College predictor",
+        "Exam",
+        "by location"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "college_name"
+    }
+  }
+}

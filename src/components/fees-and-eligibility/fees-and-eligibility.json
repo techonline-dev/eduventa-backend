@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_fees_and_eligibility_fees_and_eligibilities",
+  "info": {
+    "displayName": "fees_and_eligibility"
+  },
+  "options": {},
+  "attributes": {
+    "course": {
+      "type": "string"
+    },
+    "fees": {
+      "type": "integer"
+    },
+    "eligibility": {
+      "type": "string"
+    },
+    "application_date": {
+      "type": "date"
+    },
+    "action": {
+      "type": "string"
+    }
+  }
+}

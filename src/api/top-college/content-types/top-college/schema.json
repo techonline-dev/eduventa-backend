@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "top_colleges",
+  "info": {
+    "singularName": "top-college",
+    "pluralName": "top-colleges",
+    "displayName": "top_college",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "college_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "college_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "college_name": {
+      "type": "string"
+    },
+    "college_location": {
+      "type": "string"
+    },
+    "college_rank": {
+      "type": "string"
+    },
+    "college": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::college.college",
+      "inversedBy": "top_colleges"
+    }
+  }
+}

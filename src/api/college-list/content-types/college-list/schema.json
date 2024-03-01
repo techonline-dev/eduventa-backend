@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "college_lists",
+  "info": {
+    "singularName": "college-list",
+    "pluralName": "college-lists",
+    "displayName": "college_list",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "college_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "college_name": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "course_fee": {
+      "type": "integer"
+    },
+    "college_detail": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::college-detail.college-detail",
+      "mappedBy": "college_list"
+    },
+    "Ranking": {
+      "type": "string"
+    },
+    "topCollageMBBS": {
+      "type": "customField",
+      "customField": "plugin::content-tags.content-tags"
+    },
+    "CollageTag": {
+      "type": "enumeration",
+      "enum": [
+        "Top ranked colleges",
+        "College predictor",
+        "Exam",
+        "by location"
+      ]
+    },
+    "CollageType": {
+      "type": "enumeration",
+      "enum": [
+        "MBBS",
+        "MBA",
+        "B.TECH",
+        "M.TECH"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "college_name"
+    }
+  }
+}

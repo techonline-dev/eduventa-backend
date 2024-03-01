@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footer_strips",
+  "info": {
+    "singularName": "footer-strip",
+    "pluralName": "footer-strips",
+    "displayName": "Footer Strip",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HeadLine": {
+      "type": "string"
+    },
+    "MobileNumner": {
+      "type": "biginteger",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "home_abouts",
+  "info": {
+    "singularName": "home-about",
+    "pluralName": "home-abouts",
+    "displayName": "HomeAbout",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "AboutTitle": {
+      "type": "string"
+    },
+    "AboutEduventa": {
+      "type": "string"
+    },
+    "AboutEduventaContent": {
+      "type": "text"
+    },
+    "CompanyImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

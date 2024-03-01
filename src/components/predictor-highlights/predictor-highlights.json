@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_predictor_highlights_predictor_highlights",
+  "info": {
+    "displayName": "predictor_highlights"
+  },
+  "options": {},
+  "attributes": {
+    "established_year": {
+      "type": "string"
+    },
+    "campus_area": {
+      "type": "string"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "institute_type": {
+      "type": "string"
+    },
+    "cutoff": {
+      "type": "string"
+    },
+    "accepted_entrance_exams": {
+      "type": "string"
+    }
+  }
+}

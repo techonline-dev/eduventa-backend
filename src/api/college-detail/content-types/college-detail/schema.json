@@ -1,0 +1,77 @@
+{
+  "kind": "collectionType",
+  "collectionName": "college_details",
+  "info": {
+    "singularName": "college-detail",
+    "pluralName": "college-details",
+    "displayName": "college_detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "college_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "college_name": {
+      "type": "string"
+    },
+    "college_description": {
+      "type": "text"
+    },
+    "location": {
+      "type": "string"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "college_highlights": {
+      "displayName": "college_highlights",
+      "type": "component",
+      "repeatable": false,
+      "component": "college-highlights.college-highlights"
+    },
+    "fees_and_eligibility": {
+      "displayName": "fees_and_eligibility",
+      "type": "component",
+      "repeatable": false,
+      "component": "fees-and-eligibility.fees-and-eligibility"
+    },
+    "college_list": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::college-list.college-list",
+      "inversedBy": "college_detail"
+    },
+    "about_admissions": {
+      "type": "richtext"
+    },
+    "about_placement": {
+      "type": "richtext"
+    },
+    "table": {
+      "type": "customField",
+      "options": {
+        "preset": "toolbar"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "college_name"
+    },
+    "college_rank": {
+      "type": "string"
+    }
+  }
+}

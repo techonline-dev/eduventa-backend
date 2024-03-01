@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_college_highlights_college_highlights",
+  "info": {
+    "displayName": "college_highlights",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "campus_area": {
+      "type": "integer"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "institute_type": {
+      "type": "string"
+    },
+    "accepted_entrance_exams": {
+      "type": "string"
+    },
+    "cutoff": {
+      "type": "string"
+    },
+    "established_year": {
+      "type": "string"
+    }
+  }
+}

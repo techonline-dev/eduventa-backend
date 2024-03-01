@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "college_predictors",
+  "info": {
+    "singularName": "college-predictor",
+    "pluralName": "college-predictors",
+    "displayName": "college-predictor",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "event_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "event_name": {
+      "type": "string"
+    },
+    "colleges_participating": {
+      "type": "string"
+    },
+    "exam_level": {
+      "type": "string"
+    },
+    "event_description": {
+      "type": "text"
+    },
+    "college_predictor_detail": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::college-predictor-detail.college-predictor-detail",
+      "inversedBy": "college_predictors"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "event_name"
+    },
+    "CollageTag": {
+      "type": "enumeration",
+      "enum": [
+        "Top ranked colleges",
+        "College predictor",
+        "Exam",
+        "by location"
+      ]
+    },
+    "CollageType": {
+      "type": "enumeration",
+      "enum": [
+        "MBBS",
+        "MBA",
+        "B.TECH",
+        "M.TECH"
+      ]
+    }
+  }
+}

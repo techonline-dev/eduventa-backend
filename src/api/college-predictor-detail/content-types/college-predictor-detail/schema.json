@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "college_predictor_details",
+  "info": {
+    "singularName": "college-predictor-detail",
+    "pluralName": "college-predictor-details",
+    "displayName": "college-predictor-detail",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "predictor_banner": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "predictor_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "predictor_title": {
+      "type": "text"
+    },
+    "predictor_subtitle": {
+      "type": "text"
+    },
+    "predictor_location": {
+      "type": "string"
+    },
+    "approved_by": {
+      "type": "string"
+    },
+    "established_year": {
+      "type": "string"
+    },
+    "rank": {
+      "type": "string"
+    },
+    "predictor_highlights": {
+      "displayName": "predictor_highlights",
+      "type": "component",
+      "repeatable": false,
+      "component": "predictor-highlights.predictor-highlights"
+    },
+    "header_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "about_predictor": {
+      "type": "text"
+    },
+    "college_predictors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::college-predictor.college-predictor",
+      "mappedBy": "college_predictor_detail"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "predictor_title"
+    }
+  }
+}
